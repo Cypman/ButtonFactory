@@ -24,7 +24,6 @@ EVT_BUTTON(168, cMain::OnButtonClick)
 EVT_BUTTON(169, cMain::OnButtonClick)
 
 wxEND_EVENT_TABLE()
-
 cMain::cMain(): wxFrame(nullptr, wxID_ANY, "Calculator", wxPoint(400, 400), wxSize(600, 600)) {
 	ButtonFactory factory(this);
 	xbtn = factory.CreateHexa();//new wxButton(this, 150, "Hex", wxPoint(10, 60), wxSize(80, 80));
@@ -49,6 +48,78 @@ cMain::cMain(): wxFrame(nullptr, wxID_ANY, "Calculator", wxPoint(400, 400), wxSi
 	xbtn19 = factory.CreateAddition();//new wxButton(this, 169, "+", wxPoint(280, 420), wxSize(80, 80));
 	wtext = factory.DisplayBox();//new wxTextCtrl(this, 170, "", wxPoint(5, 5), wxSize(355, 40));
 
+} 
+void cMain::OnButtonClick(wxCommandEvent& evt) {
+	// new ButtonFactory();
+	int wxid = evt.GetId();
+	switch (wxid)
+	{
+	case 150: {
+		wtext->AppendText("Hex");
+		break;
+	}
+	case 151: {
+		wtext->AppendText(".");
+		break;
+	}case 152: {
+		wtext->AppendText("Bin");
+		break;
+	}case 153: {
+		wtext->AppendText("/");
+		break;
+	}case 154: {
+		wtext->AppendText("7");
+		break;
+	}case 155: {
+		wtext->AppendText("8");
+		break;
+	}case 156: {
+		wtext->AppendText("9");
+		break;
+	}case 157: {
+		wtext->AppendText("/");
+		break;
+	}case 158: {
+		wtext->AppendText("4");
+		break;
+	}case 159: {
+		wtext->AppendText("5");
+		break;
+	}case 160: {
+		wtext->AppendText("6");
+		break;
+	}case 161: {
+		wtext->AppendText("*");
+		break;
+	}case 162: {
+		wtext->AppendText("1");
+		break;
+	}case 163: {
+		wtext->AppendText("2");
+		break;
+	}case 164: {
+		wtext->AppendText("3");
+		break;
+	}case 165: {
+		wtext->AppendText("-");
+		break;
+	}case 166: {
+		wtext->AppendText("0");
+		break;
+	}case 167: {
+		wtext->AppendText("C");
+		break;
+	}case 168: {
+		wtext->AppendText("=");
+		break;
+	}case 169: {
+		wtext->AppendText("+");
+		break;
+	}case 170: {
+		wtext->AppendText("");
+		break;
+	}
+		
+	}
+	
 }
-
- 
