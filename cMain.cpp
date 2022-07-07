@@ -24,6 +24,8 @@ EVT_BUTTON(168, cMain::OnButtonClick)
 EVT_BUTTON(169, cMain::OnButtonClick)
 
 wxEND_EVENT_TABLE()
+double first, second, result;
+char oper;
 cMain::cMain(): wxFrame(nullptr, wxID_ANY, "Calculator", wxPoint(400, 400), wxSize(600, 600)) {
 	ButtonFactory factory(this);
 	xbtn = factory.CreateHexa();//new wxButton(this, 150, "Hex", wxPoint(10, 60), wxSize(80, 80));
